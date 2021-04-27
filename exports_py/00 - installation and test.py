@@ -17,7 +17,7 @@
 get_ipython().system('conda env list')
 
 
-# In[3]:
+# In[2]:
 
 
 # Install a conda package in the current Jupyter kernel
@@ -27,7 +27,7 @@ get_ipython().system('conda install --yes --prefix {sys.prefix} matplotlib')
 
 # # Test and validation
 
-# In[1]:
+# In[3]:
 
 
 import torch
@@ -35,7 +35,7 @@ x = torch.rand(5, 3)
 print(x)
 
 
-# In[1]:
+# In[4]:
 
 
 import torch
