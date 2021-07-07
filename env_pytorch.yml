@@ -1,0 +1,12 @@
+name: pytorch
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch=1.7.1
+  - jupyter
+  - jupyter_contrib_nbextensions
+  - torchvision
+  - matplotlib
+  - pytz
+prefix: /home/explore/miniconda3/envs/pytorch
