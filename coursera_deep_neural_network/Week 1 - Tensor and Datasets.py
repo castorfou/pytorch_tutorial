@@ -238,7 +238,169 @@ new_tensor[0]
 new_tensor[0].item()
 
 
-# ## indexing and slicing
+# ### indexing and slicing
+
+# In[39]:
+
+
+c=torch.tensor([20, 1, 2, 3, 4])
+c
+
+
+# In[40]:
+
+
+c[0]=100
+c
+
+
+# In[41]:
+
+
+c[4]=0
+c
+
+
+# In[42]:
+
+
+#from 1 to 3
+d=c[1:4]
+d
+
+
+# In[44]:
+
+
+c[3:5]=torch.tensor([300.0, 4.0])
+c
+
+
+# ## Basic Operations
+
+# ### vector addition
+
+# In[46]:
+
+
+u = torch.tensor([1.0, 0.0])
+v = torch.tensor([0.0, 1.0])
+z=u+v
+z
+
+
+# ### Vector multiplication with a scalar
+
+# In[47]:
+
+
+y = torch.tensor([1, 2])
+z = 2*y
+z
+
+
+# ### hadamard product
+
+# In[48]:
+
+
+u = torch.tensor([1, 2])
+v = torch.tensor([3, 4])
+z = u*v
+z
+
+
+# ### dot product (produit scalaire)
+
+# gives an indication about how similar these vectors are
+
+# In[49]:
+
+
+u = torch.tensor([1, 2])
+v = torch.tensor([3, 1])
+result = torch.dot(u, v)
+result
+
+
+# ### adding constant to a tensor
+
+# it uses broadcasting
+
+# In[50]:
+
+
+u = torch.tensor([1, 2, 3, -1])
+z = u + 1
+z
+
+
+# ## Functions
+
+# ### universal functions: mean, max
+
+# In[52]:
+
+
+a = torch.tensor([1, -1, 1, -1.0])
+a.mean()
+
+
+# In[53]:
+
+
+b = torch.tensor([1, -2, 3, 4, 5])
+b.max()
+
+
+# ### mathematical functions
+
+# In[54]:
+
+
+np.pi
+
+
+# In[55]:
+
+
+x= torch.tensor([0, np.pi/2, np.pi])
+x
+
+
+# In[57]:
+
+
+y=torch.sin(x)
+y
+
+
+# ### to plot math function: linspace
+
+# In[58]:
+
+
+# evenly spaced numbers into a specified interval
+torch.linspace(-2, 2, 5)
+
+
+# In[60]:
+
+
+torch.linspace(-2, 2, 9)
+
+
+# In[61]:
+
+
+x = torch.linspace(0, 2 * np.pi, 100)
+y = torch.sin(x)
+
+import matplotlib.pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+
+plt.plot(x.numpy(), y.numpy())
+
 
 # In[ ]:
 
