@@ -1,0 +1,7 @@
+name: base
+channels:
+  - defaults
+dependencies:
+  - conda
+  - python=3.8
+prefix: /home/explore/miniconda3
