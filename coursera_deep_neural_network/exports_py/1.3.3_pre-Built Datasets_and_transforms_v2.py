@@ -150,7 +150,7 @@ show_data(dataset[1])
 # As an example, the images in the MNIST dataset can be cropped and converted to a tensor. We can use <code>transform.Compose</code> we learned from the previous lab to combine the two transform functions.
 # 
 
-# In[ ]:
+# In[11]:
 
 
 # Combine two transforms: crop and convert to tensor. Apply the compose to MNIST dataset
@@ -169,7 +169,7 @@ print("The shape of the first element in the first tuple: ", dataset[0][0].shape
 # Let us plot the first image again. Notice that the black space around the <b>7</b> become less apparent.
 # 
 
-# In[ ]:
+# In[12]:
 
 
 # Plot the first element in the dataset
@@ -177,7 +177,7 @@ print("The shape of the first element in the first tuple: ", dataset[0][0].shape
 show_data(dataset[0],shape = (20, 20))
 
 
-# In[ ]:
+# In[13]:
 
 
 # Plot the second element in the dataset
@@ -188,7 +188,7 @@ show_data(dataset[1],shape = (20, 20))
 # In the below example, we horizontally flip the image, and then convert it to a tensor. Use <code>transforms.Compose()</code> to combine these two transform functions. Plot the flipped image.
 # 
 
-# In[ ]:
+# In[14]:
 
 
 # Construct the compose. Apply it on MNIST dataset. Plot the image out.
@@ -207,12 +207,15 @@ show_data(dataset[1])
 # Try to use the <code>RandomVerticalFlip</code> (vertically flip the image) with horizontally flip and convert to tensor as a compose. Apply the compose on image. Use <code>show_data()</code> to plot the second image (the image as <b>2</b>).
 # 
 
-# In[ ]:
+# In[15]:
 
 
 # Practice: Combine vertical flip, horizontal flip and convert to tensor as a compose. Apply the compose on image. Then plot the image
 
 # Type your code here
+my_data_transform = transforms.Compose([transforms.RandomVerticalFlip(p = 1), transforms.RandomHorizontalFlip(p = 1), transforms.ToTensor()])
+dataset = dsets.MNIST(root = './data', train = False, download = True, transform = my_data_transform)
+show_data(dataset[1])
 
 
 # Double-click **here** for the solution.

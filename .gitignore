@@ -1,4 +1,6 @@
 cifar-10-python.tar.gz 
 cifar-10-batches-py/*
+*/.ipynb_checkpoints
+.ipynb_checkpoints
 coursera_deep_neural_network/data/MNIST/processed/training.pt
 coursera_deep_neural_network/data/MNIST/raw/train-images-idx3-ubyte
