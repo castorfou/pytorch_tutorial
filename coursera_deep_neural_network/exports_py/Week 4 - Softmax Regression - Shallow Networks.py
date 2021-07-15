@@ -726,6 +726,10 @@ model_relu = nn.Sequential(
 )
 
 
+# # gpu monitoring
+
+# Using `nvidia -l 1`
+# 
 # ![image.png](attachment:image.png)
 
 # In[ ]:
