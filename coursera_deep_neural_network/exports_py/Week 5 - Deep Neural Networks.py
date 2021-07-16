@@ -352,6 +352,43 @@ print("The accuracy of the model with dropout: ", accuracy(model_drop, validatio
 
 # # Neural Network initialization weights
 
+# # Gradient descent with Momentum
+
+# In[42]:
+
+
+optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum = 0.4)
+
+
+# # Batch Normalization
+
+# ![image.png](attachment:image.png)
+
+# $\gamma$, $\beta$ parameters are are actually scale and shift parameters, which we're going to learn via training. 
+
+# ## using nn.Module
+
+# In[2]:
+
+
+class Net_BatchNorm(nn.Module):
+    def __init__(self, in_size, n_hidden1, n_hidden2, out_size):
+        super(Net_BatchNorm, self).__init__()
+
+        self.linear1 = nn.Linear(in_size, n_hidden1)
+        self.linear2 = nn.Linear(n_hidden1, n_hidden2)
+        self.linear3 = nn.Linear(n_hidden2, out_size)
+        
+        self.bn1 = nn.BatchNorm1d(n_hidden1)
+        self.bn2 = nn.BatchNorm1d(n_hidden2)
+        
+    def forward(self, x):
+        x=torch.sigmoid(self.bn1(self.linear1(x)))
+        x=torch.sigmoid(self.bn2(self.linear2(x)))
+        x=self.linear3(x)
+        return x
+
+
 # In[ ]:
 
 

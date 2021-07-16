@@ -265,7 +265,7 @@ layers = [input_dim, 100, 200, 100, output_dim]
 # Train the network using PyTorch Default Initialization
 # 
 
-# In[ ]:
+# In[11]:
 
 
 # Train the model with the default initialization
@@ -279,7 +279,7 @@ training_results = train(model, criterion, train_loader,validation_loader, optim
 # Train the network using He Initialization function
 # 
 
-# In[ ]:
+# In[12]:
 
 
 # Train the model with the He initialization
@@ -292,7 +292,7 @@ training_results_He = train(model_He, criterion, train_loader, validation_loader
 # Train the network using Uniform Initialization function
 # 
 
-# In[ ]:
+# In[13]:
 
 
 # Train the model with the Uniform initialization
@@ -311,7 +311,7 @@ training_results_Uniform = train(model_Uniform, criterion, train_loader, validat
 # Compare the training loss for each activation 
 # 
 
-# In[ ]:
+# In[14]:
 
 
 # Plot the loss
@@ -328,7 +328,7 @@ plt.legend()
 # Compare the validation loss for each model  
 # 
 
-# In[ ]:
+# In[15]:
 
 
 # Plot the accuracy
