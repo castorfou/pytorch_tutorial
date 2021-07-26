@@ -1,2 +1,5 @@
+coursera_deep_neural_network/.fashion/data/FashionMNIST/processed/training.pt
+coursera_deep_neural_network/.fashion/data/FashionMNIST/raw/train-images-idx3-ubyte
 coursera_deep_neural_network/data/MNIST/processed/training.pt
 coursera_deep_neural_network/data/MNIST/raw/train-images-idx3-ubyte
+books/Deep-Learning-with-PyTorch.pdf
